@@ -1,25 +1,21 @@
 import { useDispatch } from 'react-redux';
+import { addCash, getCash } from './store/actions';
 
-import './App.css';
 import { ReduxChild } from './components/ReduxChild';
 
-function App() {
+import './App.css';
 
+function App() {
   const dispatch = useDispatch();
 
-  const addCash = () => {
-    dispatch({ type: "ADD_CASH", payload: 20 })
-  }
-
-  const getCash = () => {
-    dispatch({ type: "GET_CASH", payload: 10 })
-  }
+  const handlerAddCash = () => dispatch(addCash(10));
+  const handlerGetCash = () => dispatch(getCash(5));
 
   return (
     <>
       <h1>TODO</h1>
-      <button onClick={addCash}>add</button>
-      <button onClick={getCash}>get</button>
+      <button onClick={handlerAddCash}>add</button>
+      <button onClick={handlerGetCash}>get</button>
       <ReduxChild />
     </>
   )

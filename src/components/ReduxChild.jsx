@@ -1,9 +1,9 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 
 export const ReduxChild = () => {
-    const cash = useSelector(state => state.cash);
+    const cash = useSelector(state => state.cash.cash);
 
     return (
-        <div>{cash}</div>
+        <h1>{cash}</h1>
     )
 }

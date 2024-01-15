@@ -1,20 +1,14 @@
-import { legacy_createStore } from 'redux'
-
 const defaultState = {
-    cash: 0
+    customers: []
 }
 
-const reducer = (state = defaultState, action) => {
+export const customersReducer = (state = defaultState, action) => {
     switch (action.type) {
-        case "ADD_CASH":
+        case "ADD_CUSTOMER":
             return { ...state, cash: state.cash + action.payload }
-        case "GET_CASH":
+        case "GET_CUSTOMER":
             return { ...state, cash: state.cash - action.payload }
         default:
             return state;
     }
 }
-
-const store = legacy_createStore(reducer);
-
-export default store;
