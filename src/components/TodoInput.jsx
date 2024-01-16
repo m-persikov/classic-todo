@@ -1,24 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTask } from "../store/actions/todoActions";
 
-export const TodoInput = ({ setData }) => {
-    const [tasks, setTasks] = useState([]);
+export const TodoInput = () => {
     const [value, setValue] = useState('');
+    const dispatch = useDispatch();
 
-    const addTask = () => {
-        setTasks([
-            ...tasks,
-            {
-                id: new Date().toISOString(),
-                title: value,
-                completed: false
-            }
-        ]);
+    const handlerAddTask = () => {
+        dispatch(addTask({
+            id: new Date().toISOString(),
+            name: value,
+            completed: false
+        }));
         setValue('');
     }
-
-    useEffect(() => {
-        setData(tasks);
-    }, [tasks]);
 
     return (
         <>
@@ -27,8 +22,7 @@ export const TodoInput = ({ setData }) => {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
             />
-            <button onClick={addTask}> add </button>
-            {/* {tasks?.map((task, i) => <h3 key={i}>{task.title}</h3>)} */}
+            <button onClick={handlerAddTask}> add </button>
         </>
     )
 }

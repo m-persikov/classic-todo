@@ -1,9 +1,20 @@
-import { TodoItem } from './TodoItem';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-export const TodoList = ({ data }) => {
+import { TodoItem } from './TodoItem';
+import { fetchTasks } from '../store/asyncActions/fetchTasks';
+
+export const TodoList = () => {
+    const dispatch = useDispatch();
+    const todoLists = useSelector(state => state.tasks.todoLists);
+
+    useEffect(() => {
+        dispatch(fetchTasks());
+    }, []);
+
     return (
         <>
-            {data?.map((task, i) => (<TodoItem key={i} task={task} />))}
+            {todoLists?.map(task => (<TodoItem key={task.id} task={task} />))}
         </>
     )
 }

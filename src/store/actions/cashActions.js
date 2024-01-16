@@ -1,4 +1,5 @@
-import { ADD_CASH, GET_CASH } from './constants'
+export const ADD_CASH = 'ADD_CASH';
+export const GET_CASH = 'GET_CASH';
 
 export const addCash = number => {
     return {
