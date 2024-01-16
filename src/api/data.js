@@ -2,16 +2,16 @@ export const data = new Promise((resolve, reject) => {
     const tasks = [
         {
             id: 1,
-            title: 'Bear',
+            name: 'Bear',
             completed: true
         },
         {
             id: 2,
-            title: 'Whisky',
+            name: 'Whisky',
             completed: true
         },
     ]
     setTimeout(() => {
         resolve(tasks)
-    }, 1000);
+    }, 1500);
 })
