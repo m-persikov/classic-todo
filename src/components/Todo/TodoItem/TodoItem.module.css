@@ -1,9 +1,14 @@
 .item {
     display: flex;
     justify-content: space-between;
+    padding: 0 15px;
     margin-top: 10px;
     border: 1px solid white;
-    padding: 5px;
-    line-height: 2;
     border-radius: 10px;
+    font-size: 18px;
+    line-height: 44px;
+}
+
+.close {
+    cursor: pointer;
 }

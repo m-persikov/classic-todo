@@ -3,12 +3,12 @@ export const data = new Promise((resolve, reject) => {
         {
             id: 1,
             name: 'Bear',
-            completed: true
+            completed: false
         },
         {
             id: 2,
             name: 'Whisky',
-            completed: true
+            completed: false
         },
     ]
     setTimeout(() => {
