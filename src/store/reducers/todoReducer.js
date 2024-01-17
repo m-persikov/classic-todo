@@ -1,7 +1,8 @@
 import { ADD_TASK, GET_TASKS, REMOVE_TASK } from '../actions/todoActions';
 
 const defaultState = {
-    todoLists: []
+    todoLists: [],
+    loading: true,
 }
 
 export const todosReducer = (state = defaultState, action) => {
@@ -23,7 +24,8 @@ export const todosReducer = (state = defaultState, action) => {
             console.log(action.payload);
             return {
                 ...state,
-                todoLists: [...state.todoLists, ...action.payload]
+                todoLists: [...state.todoLists, ...action.payload],
+                loading: false,
             }
         default:
             return state;

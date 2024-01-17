@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { TodoItem } from './TodoItem';
@@ -6,12 +6,10 @@ import { fetchTasks } from '../store/asyncActions/fetchTasks';
 
 export const TodoList = () => {
     const dispatch = useDispatch();
-    const [loading, setLoading] = useState(true);
-    const todoLists = useSelector(state => state.tasks.todoLists);
+    const { todoLists, loading } = useSelector(state => state.tasks);
 
     useEffect(() => {
         dispatch(fetchTasks());
-        setLoading(false);
     }, []);
 
     return (
