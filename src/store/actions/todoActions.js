@@ -3,6 +3,7 @@ export const GET_TASKS = 'GET_TASKS';
 export const REMOVE_TASK = 'REMOVE_TASK';
 
 export const addTask = task => {
+    console.log(task)
     return {
         type: ADD_TASK,
         payload: task

@@ -12,15 +12,9 @@ export const TodoItem = ({ task }) => {
 
     return (
         <div className={styles.item}>
-            <input type="checkbox" /> 
+            <input type="checkbox" />
             <span>{task.name}</span>
-            <img
-                className={styles.close}
-                onClick={hendlerDeleteTask}
-                src={Trash}
-                alt="trash"
-                width={20}
-            />
+            <img className={styles.close} onClick={hendlerDeleteTask} src={Trash} alt="trash" width={20} />
         </div>
     )
 }

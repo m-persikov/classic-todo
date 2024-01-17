@@ -11,4 +11,12 @@
 
 .close {
     cursor: pointer;
+    color: #fff;
+    fill: #fff;
+}
+
+.close:hover {
+    /* background-color: green; */
+    color: green;
+    /* fill: #DA4567; */
 }

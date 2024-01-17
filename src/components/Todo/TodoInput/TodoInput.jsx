@@ -8,12 +8,22 @@ export const TodoInput = () => {
     const [value, setValue] = useState('');
     const dispatch = useDispatch();
 
-    const handlerAddTask = () => {
-        dispatch(addTask({
+    const validateInput = () => {
+        if (value === '') {
+            console.log('warning')
+            return;
+        }
+
+        return {
             id: new Date().toISOString(),
-            name: value,
+            name: value.trim(),
             completed: false
-        }));
+        }
+    }
+
+    const handlerAddTask = () => {
+        const validTask = validateInput();
+        validTask && dispatch(addTask(validTask));
         setValue('');
     }
 
@@ -25,7 +35,7 @@ export const TodoInput = () => {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
             />
-            <button onClick={handlerAddTask}> add </button>
+            <button onClick={handlerAddTask}> Add </button>
         </div>
     )
 }
