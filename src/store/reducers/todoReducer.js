@@ -21,7 +21,6 @@ export const todosReducer = (state = defaultState, action) => {
             }
 
         case GET_TASKS:
-            console.log(action.payload);
             return {
                 ...state,
                 todoLists: [...state.todoLists, ...action.payload],

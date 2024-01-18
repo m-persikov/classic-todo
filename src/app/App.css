@@ -1,5 +1,7 @@
 .app-wrapper {
     display: grid;
+    margin: 0 auto;
+    max-width: 1280px;
     grid-template-areas:
         "header header"
         "sidebar main"

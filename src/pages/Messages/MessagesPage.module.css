@@ -1,0 +1,18 @@
+.MessagesPage {
+    grid-area: main;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 550px;
+    display: flex;
+}
+
+.dialogs {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+}
+
+.chat {
+    width: 70%;
+    padding: 10px;
+}

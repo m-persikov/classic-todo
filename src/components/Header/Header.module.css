@@ -1,3 +1,21 @@
 .Header {
+    grid-area: header;
+    display: flex;
+    padding: 10px;
+    /* justify-content: space-between; */
+    border: 1px solid #fff;
+}
+
+.ul {
+    display: flex;
+}
+
+.ul:nth-child(:last-child) {
+    margin-left: 10px;
     background-color: green;
+}
+
+.li:nth-child(:last-child) {
+    color: green;
+    background-color: peru;
 }

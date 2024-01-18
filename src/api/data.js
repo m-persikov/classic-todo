@@ -2,7 +2,7 @@ export const data = new Promise((resolve, reject) => {
     const tasks = [
         {
             id: 1,
-            name: 'Bear',
+            name: 'Djin',
             completed: false
         },
         {
