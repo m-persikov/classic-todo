@@ -1,1 +1,10 @@
-@import "./styles/normilize.css"
+@import "./styles/normilize.css";
+
+body {
+    background-color: #151718;
+    color: #ccc;
+}
+
+ul {
+    list-style: none;
+}
