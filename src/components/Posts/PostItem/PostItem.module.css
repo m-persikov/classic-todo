@@ -1,0 +1,11 @@
+.PostItem {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #ccc;
+}
+
+.img {
+    border-radius: 50%;
+    height: 50px;
+}

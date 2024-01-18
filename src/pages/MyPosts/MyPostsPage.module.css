@@ -1,0 +1,7 @@
+.MyPosts {
+    /* display: flex;
+    flex-direction: column; */
+    grid-area: main;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
