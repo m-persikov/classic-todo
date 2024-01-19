@@ -8,6 +8,7 @@ export const TodoList = () => {
     const dispatch = useDispatch();
     const { todoLists, loading } = useSelector(state => state.tasks);
 
+    //TODO: fix duplicate requests!
     useEffect(() => {
         dispatch(fetchTasks());
     }, []);

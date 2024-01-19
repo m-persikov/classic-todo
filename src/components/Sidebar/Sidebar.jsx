@@ -1,7 +1,8 @@
-import { Suspense } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import style from './Sidebar.module.css';
+
+const setActive = ({ isActive }) => isActive ? 'active-link' : '';
 
 export const Sidebar = () => {
     return (
@@ -9,13 +10,13 @@ export const Sidebar = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink to="/" className={setActive}>Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/messages">Messages</Link>
+                        <NavLink to="/messages" className={setActive}>Messages</NavLink>
                     </li>
                     <li>
-                        <Link to="/posts">Posts</Link>
+                        <NavLink to="/posts" className={setActive}>Posts</NavLink>
                     </li>
                 </ul>
             </nav>

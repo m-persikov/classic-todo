@@ -8,3 +8,20 @@ body {
 ul {
     list-style: none;
 }
+
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* .active {
+    color: peru;
+} */
+
+.active-link {
+    color: peru;
+}

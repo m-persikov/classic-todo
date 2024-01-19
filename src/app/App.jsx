@@ -19,7 +19,7 @@ export const App = () => {
       <Sidebar />
       <Footer />
       <Routes>
-        <Route path='/' element={
+        <Route index path='/' element={
           // <Suspense fallback={<Loading />}>
           <MainPage />
           // </Suspense>
